@@ -1,0 +1,75 @@
+/* Grid */
+.wrapper {
+    display: grid;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+/* Unav */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  #Unav {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+
+  * { color:#fff; text-decoration: none;}
+
+/* Color animation in Welcome section */
+  #welcome {
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: magenta;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+/* Grid in Resume Section */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+  }
+  
+  /* non-essential decorative styles */
+  .grid_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+  }
+
+  /* Footer */
+  #contact {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
