@@ -36,7 +36,7 @@ ul {
   * { color:#fff; text-decoration: none;}
 
 /* Color animation in Welcome section */
-  #welcome {
+  #welcome, #resumeButton {
     background-color: red;
     animation-name: example;
     animation-duration: 4s;
