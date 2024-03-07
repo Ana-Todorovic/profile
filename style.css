@@ -1,3 +1,8 @@
+.container {
+    max-height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+  }
 /* Grid */
 .wrapper {
     display: grid;
@@ -6,7 +11,13 @@
   * {
     box-sizing: border-box;
   }
-  
+.wrapper, #about, #welcome, #resume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    height: 100vh;
+}
 /* Unav */
 ul {
     list-style-type: none;
@@ -36,18 +47,18 @@ ul {
   * { color:#fff; text-decoration: none;}
 
 /* Color animation in Welcome section */
-  #welcome, #resumeButton {
-    background-color: red;
+  #resumeButton {
+    background-color: orangered;
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
   }
   
   @keyframes example {
-    0%   {background-color: red;}
-    25%  {background-color: magenta;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    0%   {background-color: orangered;}
+    25%  {background-color: orange;}
+    50%  {background-color: magenta;}
+    100% {background-color: orchid;}
   }
 
 /* Grid in Resume Section */
@@ -71,5 +82,5 @@ ul {
     width: 100%;
     background-color: black;
     color: white;
-    text-align: center;
+    text-align: left;
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <!-- Hello and welcome! My name is Ana Todorovic. I hope you like my website. I made it using HTML, CCS, and Javascript. Enjoy!  -->
 <head>
     <meta charset="UTF-8">
@@ -9,32 +9,36 @@
     <link rel="icon" href="profile_logo.svg">
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
     <script type="text/javascript" src="typewriter.js"></script>
-    <script type="text/javascript" src="animationLoad.js"></script>
     <title>Document</title>
 </head>
 <body style="background-color:#360136; margin: 0%;">
+    <div class="container"> 
     <ul>
         <!-- <li id="Unav" style="padding-left: 2%;"><img src="profile_logo.png" style="width: 25%; height: 25%;"></li> -->
         <li id="Unav"><a href="#about">About</a></li>
         <li id="Unav"><a href="#resume">Resumé</a></li>
         <li id="Unav"><a href="#contact">Contact</a></li>
-        <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 5px;"><a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>View Resume</a>
+        <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 5px; float: right; margin: .5%;"><a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>View Resume</a>
         </button>
-    </ul>
-   
+    </ul>  
     <!-- Home Page Video -->
     <div class="wrapper">
-        <video loop autoplay="autoplay" src="cheers_to_the_years_2024.mp4" type="video/mp4" data-aspect-ratio="4:3" playsinline="" 
+        <video loop autoplay="autoplay" src="Cheers_to_the_years_2024.mp4" type="video/mp4" data-aspect-ratio="4:3" playsinline="" 
         muted="" style="width: 100%;">
         </video>
     </div>
-    <div>
-
-    </div>
-
+ <!-- Welcome section -->
+ <div id="welcome">
+    <h1 style="text-align: center; padding-top: 2em;  padding-bottom: 2em; padding-left: 1em; padding-right: 1em; margin: auto;">
+    <a style="font-family: 'Courier New', monospace; font-size: 1em; text-align: center;" href="" class="typewrite" data-period="2000" 
+    data-type='["Welcome!","I am so glad you are here.", "I love design.", "I love to develop.", "I am a passionate PM.", "I am here to help."]'>
+    <span id="wrap"></span>
+    </a>
+  </h1>
+</div>
 
     <!-- About section -->
-        <div id="about" class="w3-container w3-center">
+        <div id="about" class="w3-container w3-center" style="margin-top: -8%;">
             <img src="osaka.png" style="width: 30%; display: block; margin-left: auto; margin-right: auto;">
             <h2>About Ana</h2>
             <p style="text-align: left; display: block; margin-left: 10%; margin-right: 10%;">
@@ -50,19 +54,11 @@
             I thoroughly enjoy developing new skills, and I am constantly looking for things to learn. Some of my most recent acquired random skills are gem faceting, quilling, and paper making.
             </p>
         </div>
-            <!-- Welcome section -->
-            <div id="welcome" style="min-height: 32vh;">
-                <h1 style="text-align: center; padding-top: 2em; padding-bottom: 2em; padding-left: 1em; padding-right: 1em; margin: auto;">
-                <a style="font-family: 'Courier New', monospace; font-size: 1em; text-align: center;" href="" class="typewrite" data-period="2000" 
-                data-type='["I am so glad you are here.", "I love design.", "I love to develop.", "I am a passionate PM.", "I am here to help."]'>
-                <span id="wrap"></span>
-                </a>
-              </h1>
-            </div>
+           
     <!-- Resume section -->
         <div id="resume">
-            <div class="w3-container w3-center w3-animate-left">
-                <h2>Process</h2>
+            <div>
+                <h2 id="process" class="">Process</h2>
                 <div>
                 <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 10px; margin: 2%;"><a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>View Resume</a>
                 </button>
@@ -91,15 +87,20 @@
         <div>
 
         </div>
+
+
     <!-- Contact Info section -->   
     <div id="contact" style="padding: 2%;">
+        <div class>
         <dl>
             <dt><h2>Contact</h2></dt>
             <dt>Phone: <a href="tel:+4259418110">425-941-8110</a></dt>
             <dt>Email: <a href="mailto:todorovica2137@gmail.com">todorovica2137@gmail.com</a></dt>
-        </dl>    
+        </dl>  
+    </div>  
         </div>
       </div>
-      
+      <script type="text/javascript" src="animationLoad.js"></script>
+    </div>
 </body>
 </html>
