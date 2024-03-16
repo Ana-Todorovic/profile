@@ -13,3 +13,4 @@ let myCoolElement = document.getElementById("process");
 console.log(myCoolElement);
 let myCoolObserver = new IntersectionObserver(onView, options);
 myCoolObserver.observe(myCoolElement);
+

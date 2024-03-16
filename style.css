@@ -2,70 +2,96 @@
     max-height: 100vh;
     overflow: scroll;
     scroll-snap-type: y mandatory;
-  }
-/* Grid */
-.wrapper {
-    display: grid;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-.wrapper, #about, #welcome, #resume {
+    margin:0;
+}
+
+#videoWrapper, #about, #about2, #welcome, #resume, #contact {
+    scroll-snap-align: center;
+}
+#welcome, #resume, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
+}
+
+#videoWrapper, #about, #about2, #welcome, #resume, #contact {
     height: 100vh;
 }
+
+#videoWrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100dvh;
+    overflow: hidden;
+    height: 100dvh;
+}
+
+.videoL, .videoM, .videoS {
+    display: block;
+    grid-area: 1 / 1;
+    place-self: center;
+    object-fit: cover;
+    object-position: 40% center;
+}
+
+.navbar {
+    background: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 /* Unav */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000;
   }
   
   #Unav {
     float: left;
-  }
-  
-  li a {
     display: block;
     color: white;
+    opacity: 0.75;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: Verdana, sans-serif;
   }
   
-  li a:hover {
-    background-color: #111;
+  #Unav:hover {
+    opacity: 1;
   }
 
   * { color:#fff; text-decoration: none;}
 
 /* Color animation in Welcome section */
   #resumeButton {
-    background-color: orangered;
+    background-color: black;
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    opacity: 0.75;
   }
   
-  @keyframes example {
+  #resumeButton:hover {
+    opacity: 1;
+  }
+
+  /* @keyframes example {
     0%   {background-color: orangered;}
     25%  {background-color: orange;}
     50%  {background-color: magenta;}
     100% {background-color: orchid;}
-  }
+  } */
 
 /* Grid in Resume Section */
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 100px);
     grid-gap: 10px;
   }
   
@@ -80,7 +106,87 @@ ul {
   /* Footer */
   #contact {
     width: 100%;
-    background-color: black;
     color: white;
     text-align: left;
+    background: linear-gradient (
+        to top,
+        pink 0%,
+        pink 50%,
+        paleturquoise 50%,
+        paleturquoise 100%);
   }
+
+  .osakaImg {
+    width: 20%;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+
+  .videoS {
+    display: none;
+    }
+    .videoL{
+        display: none;
+    }
+      .videoM {
+        display: none;
+    }
+
+  /* Mobile */
+  @media only screen and (max-width: 768px){
+    #welcome{
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    body {
+        background-color: red;
+    }
+    .videoS {
+    display: inline;
+    }
+    .videoL{
+        display: none;
+    }
+      .videoM {
+        display: none;
+    }
+  }
+    /* Tablet/Laptop */
+  @media only screen and (min-width: 768px) and (max-width: 1600){
+    .aboutText {
+       padding-left: 20%;
+       padding-right: 20%;
+    }
+    body {
+        background-color: blue;
+    }
+    .videoM {
+        display: inline;
+    }
+    .videoL{
+        display: none;
+    }
+      .videoS {
+        display: none;
+    }
+
+    }
+    /* Large screen*/
+    @media only screen and (min-width: 1601){
+        body {
+            background-color: red;
+        }
+        .videoL {
+            display: inline;
+            }
+            .videoS{
+                display: none;
+            }
+              .videoM {
+                display: none;
+            }
+    }
+/* XLarge screen */
+    /* @media only screen and (min-width: 3000){
+
+    } */
