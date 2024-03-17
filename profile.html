@@ -18,82 +18,94 @@
     <div class="navbar">
         <ul>
             <li id="Unav"><a href="#about">About</a></li>
-            <li id="Unav"><a href="#resume">Resumé</a></li>
+            <li id="Unav"><a href="#process">Process</a></li>
             <li id="Unav"><a href="#contact">Contact</a></li>
-            <li><button id="resumeButton" style="border: 2px solid black; border-radius: 50px; float: right; margin: .5%;"><a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>View Resume</a>
-            </button>
-            </li>
         </ul> 
     </div>
 <div class="container"> 
     <!-- Home Page Video -->
     <div id="videoWrapper">
         <video class="videoL" loop autoplay="autoplay" src="Cheers_to_the_years_2024_web_1920x1080.mp4" type="video/mp4" data-aspect-ratio="16.9"  
-        muted="" style="width: 100%;">
+        muted="" style="width: 100vw; height: 100vh;">
         </video>
         <video class="videoM" loop autoplay="autoplay" src="Cheers_to_the_years_2024_web_1440x1080.mp4" type="video/mp4" data-aspect-ratio="4:3"  
-        muted="" style="width: 100%;">
+        muted="" style="width: 100vw; height: 100vh;">
         </video>
-        <video class="videoS" loop autoplay="autoplay" src="Cheers_to_the_years_2024_web_640x1080.mp4" type="video/mp4" data-aspect-ratio="3.5"  
-        muted="" style="width: 100%;">
+        <video class="videoS" loop autoplay="autoplay" src="Cheers_to_the_years_2024_mobile_640x1080.mp4" type="video/mp4" data-aspect-ratio="3.5"  
+        muted="" style="width: 100vw; height: 100vh;">
         </video>
     </div>
- <!-- Welcome section -->
- <!-- <div id="welcome">
-    <h1>
-    <a style="font-family: 'Courier New', monospace; font-size: 1em; text-align: center;" href="" class="typewrite" data-period="2000" 
-    data-type='["Welcome!","I am so glad you are here.", "I love design.", "I love to develop.", "I am a passionate PM.", "I am here to help."]'>
-    <span id="wrap"></span>
-    </a>
-  </h1>
-</div> -->
 
     <!-- About section -->
-        <div id="about" class="w3-container w3-center" style="background-color:#360136;">
-            <img class="osakaImg" src="osaka.png" style="width: 20%; margin-left: auto; margin-right: auto;">   
-        <div>
-            <h3>A little bit about me at work</h3>
-        <p class="aboutText" style="text-align: left; margin-left: 5%; margin-right: 5%;">
-        I thrive in the dynamic realm of product management. When I discovered product management many years ago, all I could think about was how to become a PM. 
-        I spent countless hours researching and building up my knowledge on how to become the best PM. 
-        I remember fondly the day I got my first PM job offer. I couldn't have been more excited.
-        Still to this day, I read countless books on product management so I don't miss out on any important new developments in the field.
-        My approach involves aligning product roadmaps with overarching business objectives.  
-        By inspiring and leading with empathy, I foster a collaborative environment where cross-functional teams thrive to develop high-quality products on time and within budget.</p>
+    <div id="about" class="grid-container" style="background-color:#360136;">
+        <div class="aboutImageText">
+            <img class="osakaImg" src="osaka.png">   
+            <div class="containerText">
+                <div class="title">Work Life</div>
+                <p class="aboutText">
+                I thrive in the dynamic realm of product management. When I discovered product management many years ago, all I could think about was how to become a PM. 
+                I spent countless hours researching and building up my knowledge on how to become the best PM. 
+                I remember fondly the day I got my first PM job offer. I couldn't have been more excited.
+                Still to this day, I read countless books on product management so I don't miss out on any important new developments in the field.
+                My approach involves aligning product roadmaps with overarching business objectives.  
+                By inspiring and leading with empathy, I foster a collaborative environment where cross-functional teams thrive to develop high-quality products on time and within budget.
+                </p>
+            </div>
         </div>
     </div>
      <!-- About section -->
-     <div id="about2" class="w3-container w3-center" style="background-color:#7b007b;">
-        <p class="aboutText" style="text-align: left; margin-left: 5%; margin-right: 5%;">
-        Outside of work, I enjoy spending time with my 2 dogs and I try to cook new recipes every chance I get. 
-        Reading has become an important pasttime where I have the opportunity to learn new things while also taking the time to relax and recharge.
-        I thoroughly enjoy developing new skills, and I am constantly looking for things to learn. Some of my most recent acquired random skills are gem faceting, quilling, and paper making.
-        </p>
+    <div id="about2" style="background-color:#7b007b;">
+        <div class="aboutImageText">
+            <img class="osakaImg" src="osaka.png"> 
+            <div class="containerText">
+                <div class="title">Personal Life</div>
+                <p class="aboutText">
+                Outside of work, I enjoy spending time with my 2 dogs and I try to cook new recipes every chance I get. 
+                Reading has become an important pasttime where I have the opportunity to learn new things while also taking the time to relax and recharge.
+                I thoroughly enjoy developing new skills, and I am constantly looking for things to learn. Some of my most recent acquired random skills are gem faceting, quilling, and paper making.
+                </p>
+            </div>
+        </div>
     </div>
-    <!-- Resume section -->
-        <div id="resume" style="background-color: rgb(0, 0, 135)">
+    <!-- Process section -->
+        <div id="processSection" style="background-color: rgb(0, 0, 135)">
             <div>
-                <h2 id="process" class="">Process</h2>
-                <div>
-                <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 10px; margin: 2%;"><a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>Hire Me</a>
-                </button>
+                <span id="process" class="">Process</span>
+                <div class="processList">
+                <dt>
+                    <dl>Ideation & requirements gathering</dl>
+                    <p>Brainstorm with other stakeholders and gather business requirements for possible features.</p>
+                    <dl>Research & data gathering</dl>
+                    <p>Research the market and look for internal data that supports features.</p>
+                    <dl>Prioritization</dl>
+                    <p>Features that have supporting data are prioritized early and often.</p>
+                    <dl>Define epics and user stories</dl>
+                    <p>The feaures with the highest business value are turned into epics and user stories.</p>
+                    <dl>UX/UI design</dl>
+                    <p>Work with designers to get wireframes and hi-fi designs created</p>
+                    <dl>Develop</dl>
+                    <p>Epics and user stories are refined with dev teams and they start build.</p>
+                    <dl>Launch</dl>
+                    <p>Once all stories are complete and throughly tested, features are launched!</p>
+                    <dl>QA</dl>
+                    <p>Track data after lauch, make improvements and keep an eye out for new feature opportunities. Repeat!</p>
+                </dt>
             </div>
             </div>
         </div>
     <!-- Contact Info section -->   
     <div id="contact" style="padding: 2%;">
-        <div class>
+        <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 10px; margin: 2%;">
+            <a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>Hire Me</a>
+        </button>
         <dl>
             <dt><h2>Contact</h2></dt>
             <dt>Phone: <a href="tel:+4259418110">425-941-8110</a></dt>
             <dt>Email: <a href="mailto:todorovica2137@gmail.com">todorovica2137@gmail.com</a></dt>
         </dl>  
-    </div>  
-        </div>
-      </div>
+    </div>
       <script type="text/javascript" src="animationLoad.js"></script>
       <script type="text/javascript" src="navBarScroll.js"></script>
-    </div>
 
 </body>
 </html>

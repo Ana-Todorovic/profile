@@ -5,26 +5,17 @@
     margin:0;
 }
 
-#videoWrapper, #about, #about2, #welcome, #resume, #contact {
+#videoWrapper, #about, #about2, #welcome, #processSection, #contact {
     scroll-snap-align: center;
 }
-#welcome, #resume, #contact {
+#welcome, #processSection {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#videoWrapper, #about, #about2, #welcome, #resume, #contact {
+#videoWrapper, #about, #about2, #welcome, #processSection, #contact {
     height: 100vh;
-}
-
-#videoWrapper {
-    position: relative;
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 100dvh;
-    overflow: hidden;
-    height: 100dvh;
 }
 
 .videoL, .videoM, .videoS {
@@ -32,7 +23,7 @@
     grid-area: 1 / 1;
     place-self: center;
     object-fit: cover;
-    object-position: 40% center;
+    object-position: center;
 }
 
 .navbar {
@@ -58,21 +49,17 @@ ul {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   #Unav:hover {
     opacity: 1;
   }
 
-  * { color:#fff; text-decoration: none;}
+  * { color:#fff; text-decoration: none; font-family: Arial, Helvetica, sans-serif;}
 
-/* Color animation in Welcome section */
   #resumeButton {
     background-color: black;
-    animation-name: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
     opacity: 0.75;
   }
   
@@ -80,39 +67,16 @@ ul {
     opacity: 1;
   }
 
-  /* @keyframes example {
-    0%   {background-color: orangered;}
-    25%  {background-color: orange;}
-    50%  {background-color: magenta;}
-    100% {background-color: orchid;}
-  } */
-
-/* Grid in Resume Section */
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 100px);
-    grid-gap: 10px;
-  }
-  
-  /* non-essential decorative styles */
-  .grid_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-  }
-
   /* Footer */
   #contact {
     width: 100%;
     color: white;
     text-align: left;
-    background: linear-gradient (
+    background: linear-gradient(
         to top,
         pink 0%,
-        pink 50%,
-        paleturquoise 50%,
+        pink 30%,
+        paleturquoise 30%,
         paleturquoise 100%);
   }
 
@@ -121,25 +85,39 @@ ul {
     margin-left: auto; 
     margin-right: auto;
   }
-
+ 
   .videoS {
-    display: none;
+      display: none;
     }
-    .videoL{
-        display: none;
+  .videoL {
+      display: none;
     }
-      .videoM {
-        display: none;
+  .videoM {
+      display: none;
     }
-
+    .processList{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
   /* Mobile */
   @media only screen and (max-width: 768px){
-    #welcome{
-        padding-left: 2%;
-        padding-right: 2%;
+
+    .osakaImg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
-    body {
-        background-color: red;
+    .containerText {
+        padding-left: 10%;
+        padding-right: 10%;
+     }
+     .aboutImageText {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     .videoS {
     display: inline;
@@ -150,15 +128,32 @@ ul {
       .videoM {
         display: none;
     }
+    .aboutText{
+        font-size: 3vw;
+      }
+      #process, .title{
+        font-size: 6vw;
+        text-align: center;
+      }
   }
     /* Tablet/Laptop */
-  @media only screen and (min-width: 768px) and (max-width: 1600){
-    .aboutText {
-       padding-left: 20%;
-       padding-right: 20%;
+  @media only screen and (min-width: 768px) and (max-width: 1600px){
+    .osakaImg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
     }
-    body {
-        background-color: blue;
+    .containerText {
+        padding-left: 20%;
+        padding-right: 20%;
+     }
+     .aboutImageText {
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
     .videoM {
         display: inline;
@@ -169,24 +164,69 @@ ul {
       .videoS {
         display: none;
     }
-
     }
     /* Large screen*/
-    @media only screen and (min-width: 1601){
-        body {
-            background-color: red;
-        }
-        .videoL {
-            display: inline;
-            }
-            .videoS{
-                display: none;
-            }
-              .videoM {
-                display: none;
-            }
+    @media only screen and (min-width: 1601px){
+    .osakaImg {
+        display: inline-block;
+        float: left;
+        width: 20%;
+    }
+    .containerText {
+        display: inline-block;
+        float: right;
+        width: 50%;
+        margin: 0 auto;
+        overflow: auto;
+    }
+    #about, #about2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .videoL {
+        display: inline;
+    }
+    .videoS{
+        display: none;
+    }
+    .videoM {
+        display: none;
+    }
+    .aboutText{
+        font-size: 1.5vw;
+      }
+      #process, .title{
+        font-size: 2vw;
+      }
     }
 /* XLarge screen */
-    /* @media only screen and (min-width: 3000){
-
-    } */
+    @media only screen and (min-width: 3000px){
+      .aboutImageText{
+        margin-left: 10%;
+        margin-right: 10%;
+      }  
+      .osakaImg {
+            display: inline-block;
+            float: left;
+            width: 20%;
+        }
+        .containerText {
+            display: inline-block;
+            float: right;
+            width: 50%;
+            margin: 0 auto;
+            overflow: auto;
+        }
+        #about, #about2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .aboutText{
+            font-size: 1vw;
+        }
+        #process, .title{
+          font-size: 1.5vw;
+        }
+    }
