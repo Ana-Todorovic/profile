@@ -1,15 +1,23 @@
-.container {
+#container {
     max-height: 100vh;
     overflow: scroll;
     scroll-snap-type: y mandatory;
     margin:0;
 }
+#navbar.black {
+  background: black;
+}
+
+#navbar.hidden {
+  display: none;
+}
+
 
 #videoWrapper, #about, #about2, #welcome, #processSection, #contact {
     scroll-snap-align: center;
 }
 #welcome, #processSection {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -26,7 +34,7 @@
     object-position: center;
 }
 
-.navbar {
+#navbar {
     background: transparent;
     position: fixed;
     width: 100%;
@@ -74,13 +82,13 @@ ul {
     text-align: left;
     background: linear-gradient(
         to top,
-        pink 0%,
-        pink 30%,
-        paleturquoise 30%,
-        paleturquoise 100%);
+        rgb(246, 69, 231) 0%,
+        rgb(246, 69, 231) 30%,
+        rgb(255, 117, 243) 30%,
+        rgb(255, 117, 243) 100%);
   }
 
-  .osakaImg {
+  #osakaImg {
     width: 20%;
     margin-left: auto; 
     margin-right: auto;
@@ -102,7 +110,7 @@ ul {
   /* Mobile */
   @media only screen and (max-width: 768px){
 
-    .osakaImg{
+    #osakaImg{
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -128,7 +136,7 @@ ul {
       .videoM {
         display: none;
     }
-    .aboutText{
+    #aboutText{
         font-size: 3vw;
       }
       #process, .title{
@@ -138,11 +146,11 @@ ul {
   }
     /* Tablet/Laptop */
   @media only screen and (min-width: 768px) and (max-width: 1600px){
-    .osakaImg{
+    #osakaImg{
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 30%;
+        width: 25%;
     }
     .containerText {
         padding-left: 20%;
@@ -167,7 +175,7 @@ ul {
     }
     /* Large screen*/
     @media only screen and (min-width: 1601px){
-    .osakaImg {
+    #osakaImg {
         display: inline-block;
         float: left;
         width: 20%;
@@ -193,7 +201,7 @@ ul {
     .videoM {
         display: none;
     }
-    .aboutText{
+    #aboutText{
         font-size: 1.5vw;
       }
       #process, .title{
@@ -206,7 +214,7 @@ ul {
         margin-left: 10%;
         margin-right: 10%;
       }  
-      .osakaImg {
+      #osakaImg {
             display: inline-block;
             float: left;
             width: 20%;
@@ -223,7 +231,7 @@ ul {
             justify-content: center;
             align-items: center;
         }
-        .aboutText{
+        #aboutText{
             font-size: 1vw;
         }
         #process, .title{

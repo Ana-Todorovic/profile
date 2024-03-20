@@ -56,7 +56,7 @@ function hideHeaderOnScroll(_scrollEvent) {
 }
 
 // Set up swoop animations
-let elementIdsToSwoop = ["process", "osakaImg"]  // ANA: Add IDs to this list to swoopify them
+let elementIdsToSwoop = ["process"]  // Add IDs to this list to swoopify them
 for (let elementId of elementIdsToSwoop) {
     let theElement = document.getElementById(elementId);
     theElement.classList.add("hidden");

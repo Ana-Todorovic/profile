@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" href="logo_profile.svg">
     <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="carouselColor.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="typewriter.js"></script>
     <title>Ana Todorovic - Product Manager</title>
@@ -15,14 +16,14 @@
 </head>
 
 <body style="background:#000; margin: 0%;">
-    <div class="navbar">
+    <div id="navbar">
         <ul>
             <li id="Unav"><a href="#about">About</a></li>
             <li id="Unav"><a href="#process">Process</a></li>
             <li id="Unav"><a href="#contact">Contact</a></li>
         </ul> 
     </div>
-<div class="container"> 
+<div id="container"> 
     <!-- Home Page Video -->
     <div id="videoWrapper">
         <video class="videoL" loop autoplay="autoplay" src="Cheers_to_the_years_2024_web_1920x1080.mp4" type="video/mp4" data-aspect-ratio="16.9"  
@@ -39,10 +40,10 @@
     <!-- About section -->
     <div id="about" class="grid-container" style="background-color:#360136;">
         <div class="aboutImageText">
-            <img class="osakaImg" src="osaka.png">   
+            <img id="osakaImg" src="osaka.png">   
             <div class="containerText">
                 <div class="title">Work Life</div>
-                <p class="aboutText">
+                <p id="aboutText">
                 I thrive in the dynamic realm of product management. When I discovered product management many years ago, all I could think about was how to become a PM. 
                 I spent countless hours researching and building up my knowledge on how to become the best PM. 
                 I remember fondly the day I got my first PM job offer. I couldn't have been more excited.
@@ -56,10 +57,10 @@
      <!-- About section -->
     <div id="about2" style="background-color:#7b007b;">
         <div class="aboutImageText">
-            <img class="osakaImg" src="osaka.png"> 
+            <img id="osakaImg" src="osaka.png"> 
             <div class="containerText">
                 <div class="title">Personal Life</div>
-                <p class="aboutText">
+                <p id="aboutText">
                 Outside of work, I enjoy spending time with my 2 dogs and I try to cook new recipes every chance I get. 
                 Reading has become an important pasttime where I have the opportunity to learn new things while also taking the time to relax and recharge.
                 I thoroughly enjoy developing new skills, and I am constantly looking for things to learn. Some of my most recent acquired random skills are gem faceting, quilling, and paper making.
@@ -68,33 +69,43 @@
         </div>
     </div>
     <!-- Process section -->
-        <div id="processSection" style="background-color: rgb(0, 0, 135)">
-            <div>
-                <span id="process" class="">Process</span>
-                <div class="processList">
-                <dt>
-                    <dl>Ideation & requirements gathering</dl>
-                    <p>Brainstorm with other stakeholders and gather business requirements for possible features.</p>
-                    <dl>Research & data gathering</dl>
-                    <p>Research the market and look for internal data that supports features.</p>
-                    <dl>Prioritization</dl>
-                    <p>Features that have supporting data are prioritized early and often.</p>
-                    <dl>Define epics and user stories</dl>
-                    <p>The feaures with the highest business value are turned into epics and user stories.</p>
-                    <dl>UX/UI design</dl>
-                    <p>Work with designers to get wireframes and hi-fi designs created</p>
-                    <dl>Develop</dl>
-                    <p>Epics and user stories are refined with dev teams and they start build.</p>
-                    <dl>Launch</dl>
-                    <p>Once all stories are complete and throughly tested, features are launched!</p>
-                    <dl>QA</dl>
-                    <p>Track data after lauch, make improvements and keep an eye out for new feature opportunities. Repeat!</p>
-                </dt>
-            </div>
-            </div>
+    <div id="processSection" style="background-color: rgb(0, 0, 135)">
+        <div>
+            <div id="process" class="">Process</div>
+            <div class="processList">
+            <dt>
+                <dl>Ideation & requirements gathering</dl>
+                <p>Brainstorm with other stakeholders and gather business requirements for possible features.</p>
+                <dl>Research & data gathering</dl>
+                <p>Research the market and look for internal data that supports features.</p>
+                <dl>Prioritization</dl>
+                <p>Features that have supporting data are prioritized early and often.</p>
+                <dl>Define epics and user stories</dl>
+                <p>The feaures with the highest business value are turned into epics and user stories.</p>
+                <dl>UX/UI design</dl>
+                <p>Work with designers to get wireframes and hi-fi designs created.</p>
+                <dl>Develop</dl>
+                <p>Epics and user stories are refined with dev teams and they start build.</p>
+                <dl>Launch</dl>
+                <p>Once all stories are complete and throughly tested, features are launched!</p>
+                <dl>QA</dl>
+                <p>Track data after lauch, make improvements and keep an eye out for new feature opportunities. Repeat!</p>
+            </dt>
         </div>
+        </div>
+    </div>
     <!-- Contact Info section -->   
-    <div id="contact" style="padding: 2%;">
+    <div id="contact">
+        <div id="welcome" style="min-height: 32vh;">
+            <h1 style="text-align: center; padding-top: 2em; padding-bottom: 2em; padding-left: 1em; padding-right: 1em; margin: auto;">
+            <a style="font-family: 'Courier New', monospace; font-size: 1em; text-align: center;" href="" class="typewrite" data-period="2000" 
+            data-type='["You&#39;ve made it all the way to the end!", "I know what you&#39;re thinking.", "You&#39;re impressed, and you want to hire me.", "You&#39;ve come to the right place.", "View my resume using the Hire Me button.", "I hope to hear from you soon.", "Have a wonderful day!"]'>
+            <span id="wrap"></span>
+            </a>
+          </h1>
+        
+        <div style="padding: 2%; background-color: #000;">
+        <div style="margin-left: auto; margin-right: auto;">
         <button id="resumeButton" style="border: 2px solid white; border-radius: 50px; padding: 10px; margin: 2%;">
             <a href="Resume_Ana-Todorovic_2024.pdf" target=”_blank” className="downloadButton" download>Hire Me</a>
         </button>
@@ -102,10 +113,12 @@
             <dt><h2>Contact</h2></dt>
             <dt>Phone: <a href="tel:+4259418110">425-941-8110</a></dt>
             <dt>Email: <a href="mailto:todorovica2137@gmail.com">todorovica2137@gmail.com</a></dt>
-        </dl>  
+        </dl>
     </div>
+</div>
+    </div>
+</div>
       <script type="text/javascript" src="animationLoad.js"></script>
-      <script type="text/javascript" src="navBarScroll.js"></script>
 
 </body>
 </html>
