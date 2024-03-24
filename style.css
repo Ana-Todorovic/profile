@@ -13,20 +13,33 @@
 }
 
 
-#videoWrapper, #about, #about2, #welcome, #processSection, #contact {
+#videoWrapper, 
+#about, 
+#about2, 
+#welcome, 
+#processSection, 
+#contact {
     scroll-snap-align: center;
 }
-#welcome, #processSection {
+#welcome, 
+#processSection {
     /* display: flex; */
     justify-content: center;
     align-items: center;
 }
 
-#videoWrapper, #about, #about2, #welcome, #processSection, #contact {
+#videoWrapper, 
+#about, 
+#about2, 
+#welcome, 
+#processSection, 
+#contact {
     height: 100vh;
 }
 
-.videoL, .videoM, .videoS {
+.videoL, 
+.videoM, 
+.videoS {
     display: block;
     grid-area: 1 / 1;
     place-self: center;
@@ -75,25 +88,18 @@ ul {
     opacity: 1;
   }
 
-  /* Footer */
   #contact {
     width: 100%;
     color: white;
     text-align: left;
-    background: linear-gradient(
-        to top,
-        rgb(246, 69, 231) 0%,
-        rgb(246, 69, 231) 30%,
-        rgb(255, 117, 243) 30%,
-        rgb(255, 117, 243) 100%);
+    background:rgb(246, 69, 231)
   }
-
   #osakaImg {
-    width: 20%;
+    max-width: 50vh;
+    max-height: 50vh;
     margin-left: auto; 
     margin-right: auto;
   }
- 
   .videoS {
       display: none;
     }
@@ -103,10 +109,24 @@ ul {
   .videoM {
       display: none;
     }
-    .processList{
+  .processList{
       margin-left: 5%;
       margin-right: 5%;
     }
+
+/* .processContainer {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5%;
+  align-items: center;
+}
+.item1 {
+  background-color: #fff;
+  border-radius: 10%;
+  width: 20vw;
+  height: 30vw;
+} */
+
   /* Mobile */
   @media only screen and (max-width: 768px){
 
@@ -114,13 +134,14 @@ ul {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        max-width: 40vh;
+        max-height: 40vh;
     }
     .containerText {
         padding-left: 10%;
         padding-right: 10%;
      }
-     .aboutImageText {
+    .aboutImageText {
         position: relative;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -133,13 +154,14 @@ ul {
     .videoL{
         display: none;
     }
-      .videoM {
+    .videoM {
         display: none;
     }
     #aboutText{
-        font-size: 3vw;
+        font-size: 4vw;
       }
-      #process, .title{
+    #process, 
+    .title{
         font-size: 6vw;
         text-align: center;
       }
@@ -150,7 +172,8 @@ ul {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 25%;
+        max-width: 50vh;
+        max-height: 50vh;
     }
     .containerText {
         padding-left: 20%;
@@ -169,7 +192,7 @@ ul {
     .videoL{
         display: none;
     }
-      .videoS {
+    .videoS {
         display: none;
     }
     }
@@ -187,7 +210,8 @@ ul {
         margin: 0 auto;
         overflow: auto;
     }
-    #about, #about2 {
+    #about, 
+    #about2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -217,7 +241,8 @@ ul {
       #osakaImg {
             display: inline-block;
             float: left;
-            width: 20%;
+            max-width: 50vh;
+            max-height: 50vh;
         }
         .containerText {
             display: inline-block;
@@ -226,7 +251,8 @@ ul {
             margin: 0 auto;
             overflow: auto;
         }
-        #about, #about2 {
+        #about, 
+        #about2 {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -234,7 +260,8 @@ ul {
         #aboutText{
             font-size: 1vw;
         }
-        #process, .title{
+        #process, 
+        .title{
           font-size: 1.5vw;
         }
     }

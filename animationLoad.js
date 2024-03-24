@@ -41,6 +41,7 @@ function updateHeader(entries) {
 let lastScrollPosition = 0;
 
 function hideHeaderOnScroll(_scrollEvent) {
+    console.log("scroll");
     let container = document.getElementById("container");
     let newScrollPosition = container.scrollTop;
 
@@ -56,7 +57,7 @@ function hideHeaderOnScroll(_scrollEvent) {
 }
 
 // Set up swoop animations
-let elementIdsToSwoop = ["process"]  // Add IDs to this list to swoopify them
+let elementIdsToSwoop = []  // Add IDs to this list to swoopify them
 for (let elementId of elementIdsToSwoop) {
     let theElement = document.getElementById(elementId);
     theElement.classList.add("hidden");
