@@ -113,19 +113,6 @@ ul {
       margin-right: 5%;
     }
 
-/* .processContainer {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 5%;
-  align-items: center;
-}
-.item1 {
-  background-color: #fff;
-  border-radius: 10%;
-  width: 20vw;
-  height: 30vw;
-} */
-
   /* Mobile */
   @media only screen and (max-width: 768px){
 
