@@ -1,3 +1,15 @@
+#videoWrapper{
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+  grid-template-columns: 100vw;
+  -ms-grid-rows: 100dvh;
+  grid-template-rows: 100dvh;
+  overflow: hidden;
+  height: 100dvh;
+}
+
 .grid-container {
   padding-bottom: 60px;
   padding-top: 60px;
