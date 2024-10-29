@@ -1,6 +1,10 @@
+.grid-container {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
 #container {
     height: auto;
-    max-height: 100vh;
+    max-height: 100dvh;
     overflow: scroll;
     scroll-snap-type: y mandatory;
     margin:0;
@@ -12,7 +16,6 @@
 #navbar.hidden {
   display: none;
 }
-
 
 #videoWrapper, 
 #about, 
@@ -34,7 +37,7 @@
 #welcome, 
 #processSection, 
 #contact {
-    height: 100vh;
+    height: 100dvh;
 }
 
 .videoL, 
